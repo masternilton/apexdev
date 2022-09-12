@@ -1,13 +1,3 @@
-roi:
-  iam:
-    clientSecret: cV7mCCr1clSfZBAxuvdzCXpc7WwvKPLY
-    urlServer: http://aa4275ee716c8498496efa4a1c7397bf-708089319.us-east-1.elb.amazonaws.com:8090
-spring:
-  security:
-    oauth2:
-      resourceserver:
-        opaquetoken:
-          introspection-uri: http://aa4275ee716c8498496efa4a1c7397bf-708089319.us-east-1.elb.amazonaws.com:8090/realms/roiApex/protocol/openid-connect/token/introspect
-          client-secret: ${roi.iam.clientSecret}
-  datasource:
-    url: jdbc:postgresql://dev-roi-apex.cdf3yohzau2h.us-east-1.rds.amazonaws.com:5432/dev-roi-apex
+logging:
+  level:
+    com.apex.roi.schools: debug
