@@ -1,0 +1,13 @@
+roi:
+  iam:
+    clientSecret: cV7mCCr1clSfZBAxuvdzCXpc7WwvKPLY
+    urlServer: http://10.100.81.146:8080
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        opaquetoken:
+          introspection-uri: http://10.100.81.146:8080/realms/roiApex/protocol/openid-connect/token/introspect
+          client-secret: ${roi.iam.clientSecret}
+  datasource:
+    url: jdbc:postgresql://dev-roi-apex.cdf3yohzau2h.us-east-1.rds.amazonaws.com:5432/dev-roi-apex
