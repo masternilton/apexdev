@@ -6,7 +6,7 @@ roi:
 
     urlServer: http://localhost:8080
 
-    origin: http://localhost:8090
+    origin: http://localhost:8080
 
 spring:
 
@@ -18,7 +18,7 @@ spring:
 
         opaquetoken:
 
-          introspection-uri: http://localhost:8090/realms/roiApex/protocol/openid-connect/token/introspect
+          introspection-uri: http://localhost:8080/realms/roiApex/protocol/openid-connect/token/introspect
 
           client-secret: ${roi.iam.clientSecret}
 
