@@ -1,0 +1,27 @@
+roi:
+
+  iam:
+
+    clientSecret: ModKH5nhhQKAofmp8OIlzqBQCYGskXZO
+
+    urlServer: http://localhost:8080
+
+    origin: http://localhost:8090
+
+spring:
+
+  security:
+
+    oauth2:
+
+      resourceserver:
+
+        opaquetoken:
+
+          introspection-uri: http://localhost:8090/realms/roiApex/protocol/openid-connect/token/introspect
+
+          client-secret: ${roi.iam.clientSecret}
+
+  datasource:
+
+    url: jdbc:postgresql://localhost:5432/dev-roi-apex
